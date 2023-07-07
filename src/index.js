@@ -41,5 +41,5 @@ app.get('/users/:id', handleReadDataById)
 app.put('/users/:id', handleUpdateData)
 
 app.listen(PORT, () => {
-  console.log(`Successfully running at http://localhost:${PORT}`)
+  console.log(`Successfully running at http://app-url:${PORT}`)
 })
