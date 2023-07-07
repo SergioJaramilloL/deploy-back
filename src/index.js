@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors')
 
@@ -9,7 +10,7 @@ const {
 } = require('./controller')
 
 const app = express()
-const port = 8080
+const PORT =  process.env.PORT || 8080
 
 // MVC
 // Model - View - Controller
@@ -39,6 +40,6 @@ app.get('/users/:id', handleReadDataById)
 //Update - PUT
 app.put('/users/:id', handleUpdateData)
 
-app.listen(port, () => {
-  console.log(`Successfully running at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Successfully running at http://localhost:${PORT}`)
 })
